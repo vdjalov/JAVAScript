@@ -1,0 +1,40 @@
+form {
+    float: right;
+    display: inline-block;
+    padding-right: 40px;
+}
+
+form label {
+    padding-right: 5px;
+    margin: 5px;
+
+}
+
+form input {
+    margin: 5px;
+}
+
+#listOfCountries{
+    display: inline-block;
+}
+
+h3 {
+    padding-left: 80px; 
+}
+
+#element {
+    border: 2px solid black;
+}
+
+#addCountry{
+    margin: 5px;
+    margin-left:200px;
+}
+
+button {
+    margin: 3px;
+}
+
+#allTowns {
+    display: inline-block;
+}
