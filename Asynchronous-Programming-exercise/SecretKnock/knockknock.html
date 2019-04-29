@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <title>SecretKnock</title>
+</head>
+<body>
+    <input type="button" value="Knock" id="knock"></input>
+
+
+    <script>
+        let appSecret = `447b8e7046f048039d95610c1b039390`;
+        let baseURL = `https://baas.kinvey.com/appdata/kid_BJXTsSi-e/knock?query=`;
+        let username = `guest`;
+        let password = `guest`;
+        let base64Auth = btoa(username + ":" + password);
+        let headers = {
+            "Authorization": "Basic " + base64Auth,
+        }
+        
+
+        $(`#knock`).on(`click`, function() {
+        let message = `Knock Knock.`;
+        console.log(message);
+        function getNext(message) {
+           $.get({
+            method: `GET`,
+            url: baseURL + message,
+            headers
+           })
+           .then(function(data) {
+               if (data.answer) {
+                   console.log(data.answer);
+               }
+
+               if(data.message) {
+                console.log(data.message);
+                message = data.message;
+                getNext(message);
+               }
+           })
+        
+        }
+        getNext(message);
+        });
+    </script>
+</body>
+</html>
