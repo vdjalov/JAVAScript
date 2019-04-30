@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-grid.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
+                crossorigin="anonymous">
+    <link rel="stylesheet" href="./CustomPlugins/bootstrap-social.css">       
+    <link rel="stylesheet" href="./CustomPlugins/sweetalert.css">
+    <link rel="stylesheet" href="./CustomPlugins/dropify.min.css">    
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./CustomPlugins/sweetalert.min.js"></script>
+    <script src="./CustomPlugins/dropify.min.js"></script>
+    <script src="solution.js"></script>
+    <title>Job Application</title>
+</head>
+<body>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-1"></div>
+        <div class="col-10 blue-background p-5 rounded">
+            <h2 class="h2 text-center text-white">JOB APPLICATION</h2>
+            <h4 class="h4 text-center text-white font-italic">we are looking for someone like you</h4>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header blue-background" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Enter your data
+                        </button>
+                    </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName"  placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName"  placeholder="Last Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                        </form>
+                            <a class="btn btn-inline-block btn-social btn-google text-left text-white" onclick="google()">
+                                <span class="fab fa-google"></span> Sign in with Google
+                            </a>
+                            <a class="btn btn-inline-block btn-social btn-facebook text-left text-white" onclick="facebook()">
+                                <span class="fab fa-facebook"></span> Sign in with Facebook
+                            </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header blue-background" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Social media profile
+                        </button>
+                    </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text btn btn-social-icon btn-twitter" >
+                                        <span class="fab fa-twitter"></span>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Twitter profile">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text btn btn-social-icon btn-facebook" >
+                                            <i class="fab fa-facebook"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Facebook profile">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text btn btn-social-icon btn-github" >
+                                        <span class="fab fa-github"></span>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Github profile">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text btn btn-social-icon btn-linkedin" >
+                                        <span class="fab fa-linkedin"></span>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Linkedin profile">
+                            </div>
+                            
+                    </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header blue-background" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Upload CV
+                        </button>
+                    </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="dropify-wrapper has-preview">
+                            <div class="dropify-message">
+                                <span class="file-icon"></span>
+                                    <p>Drag and drop a file here or click</p>
+                                    <p class="dropify-error">Ooops, something wrong appended.</p>
+                                </div><div class="dropify-loader" style="display: none;"></div>
+                                <div class="dropify-errors-container">
+                                    <ul></ul>
+                                </div>
+                                <input type="file" id="input-file-events" class="dropify-event" data-default-file="src/images/test-image-1.jpg">
+                                <button type="button" class="dropify-clear">Remove</button>
+                                <div class="dropify-preview" style="display: block;"><span class="dropify-render">
+                                    <img src="src/images/test-image-1.jpg"></span>
+                                    <div class="dropify-infos"><div class="dropify-infos-inner">
+                                        <p class="dropify-filename">
+                                            <span class="file-icon"></span> 
+                                            <span class="dropify-filename-inner">test-image-1.jpg</span>
+                                        </p>
+                                        <p class="dropify-infos-message">Drag and drop or click to replace</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                    <button type="submit" id="submitBtn"
+                            class="blue-background text-white mt-3 text-uppercase" >
+                        Submit
+                    </button>
+                </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+</body>
+</html>

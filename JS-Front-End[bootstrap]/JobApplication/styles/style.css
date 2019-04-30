@@ -1,0 +1,13 @@
+body {
+    background-image: url("/JobApplication/skeleton/img/hands-with-pencil-and-ruler.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blue-background {
+    background-color: rgb(129, 166, 226);
+}
+
+#submitBtn {
+    border-radius: 6px;
+}
