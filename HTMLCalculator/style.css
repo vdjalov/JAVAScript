@@ -1,0 +1,79 @@
+body {
+    background-color: aquamarine;
+}
+
+h1 {
+    text-align: left;
+    padding-left: 5rem;
+}
+
+#calculatorForm {
+    margin-left: 40%;
+    margin-top: 14%;
+    
+}
+
+.initialRow {
+    width: 28rem;
+}
+
+.initialRow input:hover {
+    background-color: lightblue;
+    cursor: grabbing;
+}
+
+.initialRow input {
+    width: 6.81rem;
+    height: 4rem;
+    margin-left: -4px;
+    border: solid 1px black;
+    font-size: 120%
+}
+
+#equalsC {
+    background-color: palevioletred;
+    width: 13.62rem;
+    height: 4rem;
+    border: solid 1px black;
+    font-size: 120%;
+    margin-left: -4px;
+}
+
+.firstRows input {
+    width: 26.99rem;
+    height: 2rem;
+    margin-left: -4px;
+    text-align: right;
+    font-size: 120%;
+}
+
+.row input {
+    width: 6.81rem;
+    height: 4rem;
+    margin-left: -4px;
+    border: solid 1px black;
+    font-size: 120%
+}
+
+.row input:hover {
+    background-color: lightblue;
+    cursor: grabbing;
+}
+
+.row {
+    width: 28rem;
+}
+
+.finalCol {
+    background-color: orange;
+    border: solid 1px black;
+}
+
+.equals {
+    background-color: burlywood;
+}
+
+.rest {
+    background-color: antiquewhite;
+}
+

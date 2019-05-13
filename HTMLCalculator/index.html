@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   
+<div id="calculatorForm">
+    <h1>HTML Calculator</h1>
+  <div class="firstRows">
+    <input  type="text"  disabled="true" id="firstRows-result"><br>
+    <input  type="text"  disabled="true" id="firstRows-input"><br>
+  </div>
+  <div class="initialRow">
+    <input  type="button"  value="C" id="equalsC">
+    <input  type="button"  value="back" class="rest">
+    <input  type="button"  value="%" class="finalCol">
+  </div>
+  <div class="row">
+    <input  type="button"  value="7" class="rest">
+    <input  type="button"  value="8" class="rest">
+    <input  type="button"  value="9" class="rest">
+    <input  type="button"  value="+" class="finalCol"><br>
+  </div>
+  <div class="row"> 
+    <input  type="button"  value="4" class="rest">
+    <input  type="button"  value="5" class="rest">
+    <input  type="button"  value="6" class="rest">
+    <input  type="button"  value="-" class="finalCol"><br>
+ </div>
+  <div class="row">    
+    <input  type="button"  value="1" class="rest">
+    <input  type="button"  value="2" class="rest">
+    <input  type="button"  value="3" class="rest">
+    <input  type="button"  value="x" class="finalCol"><br>
+  </div>  
+  <div class="row">    
+    <input  type="button"  value="0" class="rest">
+    <input  type="button"  value="." class="rest">
+    <input  type="button"  value="=" class="equals">
+    <input  type="button"  value="÷" class="finalCol"><br>
+  </div>
+</div>
+
+<script src="./solve.js"></script>
+</body>
+</html>
